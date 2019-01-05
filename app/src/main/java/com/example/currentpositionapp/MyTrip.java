@@ -183,11 +183,12 @@ public class MyTrip extends AppCompatActivity {
 
                 // CheckDates(startDate1,endDate1);
 
+               /* Log.e("Startdate",startDate1);
+                Log.e("endDate1",endDate1);
+                Log.e("startTime1",startTime1);
+                Log.e("EndTime1",EndTime1);*/
 
-                Toast.makeText(MyTrip.this, startDate1, Toast.LENGTH_LONG).show();
-                Toast.makeText(MyTrip.this, endDate1, Toast.LENGTH_SHORT).show();
-                Toast.makeText(MyTrip.this, startTime1, Toast.LENGTH_SHORT).show();
-                Toast.makeText(MyTrip.this, EndTime1, Toast.LENGTH_SHORT).show();
+
 
 
                 if (f_km.getText().toString().equals("")) {
@@ -455,127 +456,7 @@ public class MyTrip extends AppCompatActivity {
             }
         });
 
-        /*next.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                countError=0;
-
-               // spinnerStatus2 spinnerSpokenTo2 spinnerStatus
-
-                if(spinnerStatus.getSelectedItem().toString().equals("Vehicle"))
-                {
-                    countError++;
-                    sp_3.setVisibility(View.VISIBLE);
-                }
-                else {
-                    sp_3.setVisibility(View.GONE);
-                }
-                if(spinnerStatus2.getSelectedItem().toString().equals("Start Location"))
-                {
-                    countError++;
-                    sp_1.setVisibility(View.VISIBLE);
-                }
-                else {
-                    sp_1.setVisibility(View.GONE);
-                }
-                if(spinnerSpokenTo2.getSelectedItem().toString().equals("End Location"))
-                {
-                    countError++;
-                    sp_2.setVisibility(View.VISIBLE);
-
-                }
-                else {
-                    sp_2.setVisibility(View.GONE);
-                }
-
-
-
-
-
-
-
-
-
-
-
-
-                if(tripid.getText().toString().equals(""))
-                {
-                    countError++;
-                    id_error.setVisibility(View.VISIBLE);
-                }
-                else {
-                    id_error.setVisibility(View.GONE);
-                }
-                if(customer.getText().toString().equals(""))
-                {
-                    countError++;
-                    cutomer_error.setVisibility(View.VISIBLE);
-
-                }
-                else {
-                    cutomer_error.setVisibility(View.GONE);
-                }
-               if(driver.getText().toString().equals(""))
-                {
-                    countError++;
-                    driver_error.setVisibility(View.VISIBLE);
-
-                }
-                else {
-                   driver_error.setVisibility(View.GONE);
-
-               }
-
-                if(date.getText().toString().equals("Start Date"))
-                {
-                    countError++;
-                    date1.setVisibility(View.VISIBLE);
-
-
-                }
-                else {
-                    date1.setVisibility(View.GONE);
-                }
-                if(time.getText().toString().equals("E.T.A"))
-                {
-                    countError++;
-                    time1.setVisibility(View.VISIBLE);
-
-                }
-                else {
-                    time1.setVisibility(View.GONE);
-                }
-
-
-               if(countError==0)
-               {
-                    linearLayout.setVisibility(View.VISIBLE);
-                   scrollview.scrollTo(0, linearLayout.getTop());
-                   linearDate1.setVisibility(View.GONE);
-                   time1.setVisibility(View.GONE);
-                   date1.setVisibility(View.GONE);
-                   id_error.setVisibility(View.GONE);
-                   cutomer_error.setVisibility(View.GONE);
-                   driver_error.setVisibility(View.GONE);
-                   sp_1.setVisibility(View.GONE);
-                   sp_2.setVisibility(View.GONE);
-                   sp_3.setVisibility(View.GONE);
-                }
-                else {
-                   Toast.makeText(MyTrip.this, "Please Fill red marked options", Toast.LENGTH_SHORT).show();
-               }
-
-
-
-                *//*tripid.getText().toString();
-                customer.getText().toString();
-                driver.getText().toString();*//*
-
-
-            }
-        });*/
 
     }
 
@@ -838,156 +719,9 @@ public class MyTrip extends AppCompatActivity {
         AlertDialog alert = alertDialogBuilder.create();
         alert.show();
 
-        //*******************************Allert Ends Here********************************
+
     }
 
-    /*public void send()
-    {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url14,
-                new Response.Listener<String>()
-                {
-                    @Override
-                    public void onResponse(String response)
-                    {
-                        Toast.makeText(MyTrip.this, response, Toast.LENGTH_LONG).show();
-
-                    }
-                },
-                new Response.ErrorListener()
-                {
-                    @Override
-                    public void onErrorResponse(VolleyError error)
-                    {
-
-                        if (error instanceof NetworkError)
-                        {
-                            Toast.makeText(MyTrip.this,"Cannot connect to Internet...Please check your connection!",Toast.LENGTH_LONG ).show();
-                        }
-                        else if (error instanceof ServerError)
-                        {
-                            Toast.makeText(MyTrip.this,"The server could not be found. Please try again after some time!!",Toast.LENGTH_LONG ).show();
-                        }
-                        else if (error instanceof AuthFailureError)
-                        {
-                            Toast.makeText(MyTrip.this,"Cannot connect to Internet...Please check your connection !",Toast.LENGTH_LONG ).show();
-                        }
-                        else if (error instanceof ParseError)
-                        {
-                            Toast.makeText(MyTrip.this,"Parsing error! Please try again after some time !!",Toast.LENGTH_LONG ).show();
-
-                        }
-                        else if (error instanceof NoConnectionError)
-                        {
-                            Toast.makeText(MyTrip.this,"Cannot connect to Internet...Please check your connection !",Toast.LENGTH_LONG ).show();
-                        }
-                        else if (error instanceof TimeoutError)
-                        {
-                            Toast.makeText(MyTrip.this,"Cannot connect to Internet...Please check your connection !",Toast.LENGTH_LONG ).show();
-                        }
-
-                    }
-                })
-        {
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError
-            {
-                Map<String,String> parameters  = new HashMap<String, String>();
-
-*//*
-                TripId StartDate ETA  EndLocation Vehicle Customer Driver WeightLoad LR_Issed_By BrancCode Fright DriverId ProductName TripCategory
-*//*
-//Tripid StartDate StartTime ETA StartLocation EndLocation Vehicle Customer Vendor Driver WeightLoad FixKM LRIssuer BranchCode Fright DriverID ProductName TripCategory
-//**********************Transworld url functions starts here *************
-
-                //http://192.168.2.124:/TripWebService/rest/TripEntry?Tripid=20181001MH11596&StartDate=2018-10-01&StartTime=10:00:00&ETA=2018-10-10&StartLocation=Pune&EndLocation=Mumbai&Vehicle=UI_11596&Customer=SmartGrid&Vendor=Halol&Driver=Raj&WeightLoad=0&FixKM=0&LRIssuer=Test&BranchCode=0&Fright=0&DriverID=9951515151&ProductName=Test&TripCategory=Test&ReportDateTime=2018-10-01&format=json
-       //------------------------------------------------------------
-
-
-
-
-
-
-
-       //------------------------------------------------------------
-             *//*   parameters.put("Tripid",tripid.getText().toString() );
-     *//**//*parameters.put("StartDate",date.getText().toString() );*//**//*
-                parameters.put("StartDate",startDate1 );
-                parameters.put("StartTime",startTime1 );
-*//**//*
-                parameters.put("ETA",time.getText().toString() );
-
-
-*//**//*
-
-                parameters.put("ETA",endDate1 );
-
-
-                parameters.put("StartLocation",spinnerStatus2.getSelectedItem().toString() );
-                parameters.put("EndLocation",spinnerSpokenTo2.getSelectedItem().toString() );
-                parameters.put("Vehicle",spinnerStatus.getSelectedItem().toString() );
-
-                parameters.put("Customer", customer.getText().toString());
-                parameters.put("Vendor", cn.getText().toString());
-                parameters.put("Driver", driver.getText().toString());
-                parameters.put("WeightLoad", w_load.getText().toString());
-
-                parameters.put("FixKM", f_km.getText().toString());
-
-                parameters.put("LRIssuer", l_r.getText().toString());
-                parameters.put("BranchCode", b_code.getText().toString());
-                parameters.put("Fright", fright.getText().toString());
-
-                parameters.put("DriverID", tcategory.getSelectedItem().toString());
-                parameters.put("ProductName", productname.getSelectedItem().toString());
-                parameters.put("TripCategory", did.getSelectedItem().toString());
-               *//**//* parameters.put("ReportDateTime", EndTime1);*//**//*
-
-                parameters.put("ReportDateTime", EndTime1);
-                parameters.put("format", "json");*//*
-
-
-     *//*
-                DriverID=9951515151&=Test&TripCategory=Test&=2018-10-01
-*//*
-
-
-
-
-                //**************************Transworld url ends here ************
-               *//* parameters.put("TripId",tripid.getText().toString() );
-                parameters.put("StartDate",date.getText().toString() );
-                parameters.put("ETA",time.getText().toString() );
-
-                parameters.put("StartLocation",spinnerStatus2.getSelectedItem().toString() );
-                parameters.put("EndLocation",spinnerSpokenTo2.getSelectedItem().toString() );
-                parameters.put("Vehicle",spinnerStatus.getSelectedItem().toString() );
-
-                parameters.put("Customer", customer.getText().toString());
-                parameters.put("cn", cn.getText().toString());
-                parameters.put("Driver", driver.getText().toString());
-                parameters.put("WeightLoad", w_load.getText().toString());
-
-                parameters.put("fkm", f_km.getText().toString());
-
-                parameters.put("LR_Issed_By", l_r.getText().toString());
-                parameters.put("BrancCode", b_code.getText().toString());
-                parameters.put("Fright", fright.getText().toString());
-
-                parameters.put("DriverId", tcategory.getSelectedItem().toString());
-                parameters.put("ProductName", productname.getSelectedItem().toString());
-                parameters.put("TripCategory", did.getSelectedItem().toString());*//*
-
-
-                jsonformate= String.valueOf(parameters);
-                return parameters;
-
-
-            }
-        };
-
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);
-    }*/
 
 
     public boolean CheckDates(String startDate, String endDate) {
@@ -1068,48 +802,10 @@ public class MyTrip extends AppCompatActivity {
     }
 
 
-    /*public void send2()
-    {
-        final JsonArrayRequest jsonarrayRequest = new JsonArrayRequest(
-                Request.Method.POST,
-                //"http://103.241.181.36:8080/VehSummary/rest/VehicleDetails?Username=ubaidullahkhan@bddhalla.com&Password=1gjoQspE&VehCode=11437&LastRec=20&format=json\n",
-                "http://192.168.43.167:6060/TripWebService/rest/TripEntry?Tripid=20181001MH115961123&StartDate=2018-10-01&StartTime=10%3A00%3A00&ETA=2018-10-10&StartLocation=Pune&EndLocation=Mumbai&Vehicle=UI_11596&Customer=SmartGrid&Vendor=Halol&Driver=Raj&WeightLoad=0&FixKM=0&LRIssuer=Test&BranchCode=0&Fright=0&DriverID=9951515151&ProductName=Test&TripCategory=Test&ReportDateTime=2018-10-01&format=json",
-                //"http://103.241.181.36:8080/VehSummary/rest/VehicleDetails?Username="+"ubaidullahkhan@bddhalla.com"+"&Password="+"1gjoQspE"+"&VehCode="+"11437"+"&LastRec=20&format=json\n",
-                new JSONArray(),
-                new Response.Listener<JSONArray>() {
-                    @Override
-                    public void onResponse(JSONArray response) {
-                        // Log.e("Got Response ","from web service...........");
-                        // new MyLogger().storeMassage("got response from web service", ":");
 
-                        Toast.makeText(MyTrip.this, (CharSequence) response, Toast.LENGTH_SHORT).show();
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                        Toast.makeText(MyTrip.this, "Error", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
-        requestQueue.add(jsonarrayRequest);
-
-    }*/
-
-
-    //*******************************************************
 
     public void send2() {
         try {
-
-
-
-
-
-
-
 
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -1119,8 +815,8 @@ public class MyTrip extends AppCompatActivity {
                     new JSONObject(),
                     new Response.Listener<JSONObject>() {
                         public void onResponse(JSONObject response) {
-                            Toast.makeText(getApplicationContext(), "Data posted"+response.toString(), Toast.LENGTH_SHORT).show();
-                            Log.e("Exception while 1", "Sending data to server : ");
+                          //  Toast.makeText(getApplicationContext(), "Data posted"+response.toString(), Toast.LENGTH_SHORT).show();
+                            //Log.e("response", "Sending data to server : ");
                         }
                     }, new Response.ErrorListener() {
                 @Override
@@ -1134,154 +830,10 @@ public class MyTrip extends AppCompatActivity {
 
         } catch (Exception e) {
             Log.e("Exception while ", "Sending data to server : " + e.getMessage());
-            Toast.makeText(this, "Oops....Registration Failed Try Later.", Toast.LENGTH_LONG).show();
         }
-//***********************************************************************************
 
-        /*StringRequest stringRequest = new StringRequest(Request.Method.GET, "http://103.241.181.36:8080/TripWebService/rest/TripEntry?Tripid=20181011MH11161&StartDate=2018-10-01&StartTime=10:00:00&ETA=2018-10-10&StartLocation=Pune&EndLocation=Mumbai&Vehicle=UI_8954&Customer=SmartGrid&Vendor=Halol&Driver=AmitabBachan&WeightLoad=0&FixKM=0&LRIssuer=Test&BranchCode=0&Fright=0&DriverID=9951515151&ProductName=Test&TripCategory=Test&ReportDateTime=2018-10-01&format=json",
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        Toast.makeText(MyTrip.this, response, Toast.LENGTH_LONG).show();
-
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-
-                        if (error instanceof NetworkError) {
-                            Toast.makeText(MyTrip.this, "Network error ", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof ServerError) {
-                            Toast.makeText(MyTrip.this, "The server could not be found. Please try again after some time!!", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof AuthFailureError) {
-                            Toast.makeText(MyTrip.this, "Authentication error ", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof ParseError) {
-                            Toast.makeText(MyTrip.this, "Parsing error! Please try again after some time !!", Toast.LENGTH_LONG).show();
-
-                        } else if (error instanceof NoConnectionError) {
-                            Toast.makeText(MyTrip.this, "No connection error ", Toast.LENGTH_LONG).show();
-                        } else if (error instanceof TimeoutError) {
-                            Toast.makeText(MyTrip.this, "Time out error ", Toast.LENGTH_LONG).show();
-                        }
-
-                    }
-                });
-        RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
-        requestQueue.add(stringRequest);*/
     }
 }
 
 
 
-    //*********************************************************
-
-
-
-
-
-// tcategory productname did
-
-
-/*
-*
-* <?php
-if($_SERVER["REQUEST_METHOD"]=="POST")
-{
-
-
-
-require 'connection.php';
-createstudent();
-}
-
-function createstudent()
-{
-
-
-global $connect;
-$TripId=$_POST["TripId"];
-$StartDate=$_POST["StartDate"];
-$ETA=$_POST["ETA"];
-$StartLocation=$_POST["StartLocation"];
-$EndLocation=$_POST["EndLocation"];
-$Vehicle=$_POST["Vehicle"];
-$Customer=$_POST["Customer"];
-$Driver=$_POST["Driver"];
-$WeightLoad=$_POST["WeightLoad"];
-$LR_Issed_By=$_POST["LR_Issed_By"];
-$BrancCode=$_POST["BrancCode"];
-$Fright=$_POST["Fright"];
-$DriverId=$_POST["DriverId"];
-$ProductName=$_POST["ProductName"];
-$TripCategory=$_POST["TripCategory"];
-
-
-
-
-$query="Insert into tripentry(TripId,StartDate,ETA,StartLocation,EndLocation,Vehicle,Customer,Driver,WeightLoad,LR_Issed_By,BrancCode,Fright,DriverId,ProductName,TripCategory) values('$TripId','$StartDate','$ETA','$StartLocation','$EndLocation','$Vehicle','$Customer','$Driver','$WeightLoad','$LR_Issed_By','$BrancCode','$Fright','$DriverId','$ProductName','$TripCategory')";
-
-mysqli_query($connect,$query) or die(mysqli_error($connect));
-
-
-mysqli_close($connect);
-
-
-
-}
-
-?>*/
-
-
-
-/*
-
- <?php
- if($_SERVER["REQUEST_METHOD"]=="POST")
- {
-
-
-
- require 'connection.php';
- createstudent();
- }
-
- function createstudent()
- {
-
-
- global $connect;
- $TripId=$_POST["TripId"];
- $StartDate=$_POST["StartDate"];
- $ETA=$_POST["ETA"];
- $StartLocation=$_POST["StartLocation"];
- $EndLocation=$_POST["EndLocation"];
- $Vehicle=$_POST["Vehicle"];
- $Customer=$_POST["Customer"];
- $cn=$_POST["cn"];
- $Driver=$_POST["Driver"];
- $WeightLoad=$_POST["WeightLoad"];
- $fkm=$_POST["fkm"];
- $LR_Issed_By=$_POST["LR_Issed_By"];
- $BrancCode=$_POST["BrancCode"];
- $Fright=$_POST["Fright"];
- $DriverId=$_POST["DriverId"];
- $ProductName=$_POST["ProductName"];
- $TripCategory=$_POST["TripCategory"];
-
-
-
-
- $query="Insert into tripentry(TripId,StartDate,ETA,StartLocation,EndLocation,Vehicle,Customer,cn,Driver,WeightLoad,fkm,LR_Issed_By,BrancCode,Fright,DriverId,ProductName,TripCategory) values('$TripId','$StartDate','$ETA','$StartLocation','$EndLocation','$Vehicle','$Customer','$cn',$Driver','$WeightLoad','$fkm',$LR_Issed_By','$BrancCode','$Fright','$DriverId','$ProductName','$TripCategory')";
-
- mysqli_query($connect,$query) or die(mysqli_error($connect));
-
-
- mysqli_close($connect);
-
-
-
- }
-
- ?>*/
